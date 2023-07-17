@@ -1,0 +1,51 @@
+.HeaderPanel
+{
+    padding: 20px 15px;
+    height: 100vh;
+    width: 170px;
+    background-color: #1d2327;
+}
+.HeaderPanel__List
+{
+    list-style: none;
+    color: #fff;
+    font-family: Montserrat;
+    line-height: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.HeaderPanel__item
+{
+
+}
+.HeaderPanel__link
+{
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+    position: relative;
+}
+.HeaderPanel__link:hover
+{
+    color: #868686;
+    transition: .5s;
+
+}
+.HeaderPanel__link::after
+{
+    transition: .5s;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #ffffff;
+}
+.HeaderPanel__link:hover::after
+{
+    transition: .5s;
+    width: 100%;
+}

@@ -1,0 +1,50 @@
+.HomeSection2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+.HomeSection2__CarruselContainer
+{
+    width: 60%;
+    background-color: white;
+    box-shadow: 0 0 7px 0px #00000069;
+    cursor: pointer;
+    position: relative;
+
+}
+.HomeSection2__Carrusel
+{
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.HomeSection2__img
+{
+    width: 23%;
+}
+.HomeSection2__SubTitle
+{
+    font-size: 30px;
+}
+.HomeSection2__icon
+{
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #0081fe;
+}
+.HomeSection2__iconLeft
+{
+    left:  -35px;
+}
+.HomeSection2__iconRight
+{
+    right: -35px;
+}

@@ -1,0 +1,47 @@
+.Header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    min-height: 75px;
+    padding: 8px 100px;
+    width: 100%;
+    box-shadow: 0 0 6px 0px #0000001f;
+}
+.Header__Logo
+{
+    width: 288px;
+}
+.Header__navBar
+{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35px;
+}
+.Header__list
+{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+}
+.Header__item
+{
+    color: #777;
+    text-transform: uppercase;
+    font-family: "Poppins";
+    font-size: 20px;
+  
+}
+.Li__link{
+    list-style: none;
+    text-decoration: none;
+}
+.Header__item_active .Li__link
+{
+    color: #c9c4c4!important;
+   
+}
