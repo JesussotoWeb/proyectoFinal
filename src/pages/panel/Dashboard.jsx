@@ -1,13 +1,11 @@
-import HeaderPanel from '../../templates/HeaderPanel/HeaderPanel'
+import DashboardSection from "../../UI/organisms/DashboardSection/DashboardSection"
 
 const Dashboard = () => {
   return (
-    <div className='containnerPanelLayout'>
-      <HeaderPanel />
-      <main>
-          Panel
-      </main>
-    </div>
+    <main className="containnerPanelLayout">
+      <DashboardSection />
+    </main>
+     
   )
 }
 

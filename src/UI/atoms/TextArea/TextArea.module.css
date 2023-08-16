@@ -1,0 +1,14 @@
+.TextArea
+{
+    all: unset;
+    background-color: #efefef;
+    color: #696060;
+    padding: 10px 20px;
+    border: 1px solid #0000000a;
+    border-radius: 15px;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+.TextArea::placeholder{
+    color: #b6b6b6;
+}

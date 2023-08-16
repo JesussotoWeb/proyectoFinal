@@ -10,22 +10,24 @@ import PrivateRoutes from "./private/PrivateRoutes";
 import CreateTask from "../pages/panel/CreateTask";
 import Dashboard from "../pages/panel/Dashboard";
 import VerTareas from "../pages/panel/VerTareas";
+import ActualizarTasak from "../pages/panel/ActualizarTasak";
 
 const RoutesAll = () => {
   return (
         <Routes>
           <Route path="/" element={<PublicRoutes />}>
-              <Route path="/" element={<Home/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/services" element={<Services/>} />
-              <Route path="/blog" element={<Blog/>} />
-              <Route path="/contact" element={<Contact/>} />
-              <Route path="/signin" element={<CreateAccount/>} />
+              <Route index element={<Home/>} />
+              <Route path="login" element={<Login/>} />
+              <Route path="services" element={<Services/>} />
+              <Route path="blog" element={<Blog/>} />
+              <Route path="contact" element={<Contact/>} />
+              <Route path="signin" element={<CreateAccount/>} />
           </Route>
           <Route path="/" element={<PrivateRoutes />}>
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/dashboard/crear-tarea" element={<CreateTask/>} />
-              <Route path="/dashboard/ver-tareas" element={<VerTareas/>} />
+              <Route path="dashboard" element={<Dashboard />} />
+              <Route path="dashboard/crear-tarea" element={<CreateTask/>} />
+              <Route path="dashboard/ver-tareas" element={<VerTareas/>} />
+              <Route path="dashboard/ver-tareas/:id" element={<ActualizarTasak/>} />
               
           </Route>
         </Routes>

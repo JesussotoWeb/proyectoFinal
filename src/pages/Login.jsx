@@ -1,3 +1,4 @@
+import IniciarSesion from "../UI/organisms/IniciarSesion/IniciarSesion";
 import Header from "../templates/Header/Header";
 
 const Login = () => {
@@ -5,7 +6,7 @@ const Login = () => {
     <>
       <Header />
       <main>
-        Login
+        <IniciarSesion />
       </main>
     </>
   )

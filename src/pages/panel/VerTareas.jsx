@@ -1,13 +1,10 @@
-import HeaderPanel from '../../templates/HeaderPanel/HeaderPanel'
+import VerTareasSection from "../../UI/organisms/VerTareasSection/VerTareasSection";
 
 const VerTareas = () => {
   return (
-    <div className='containnerPanelLayout'>
-      <HeaderPanel />
-      <main>
-          Ver tarea
-      </main>
-    </div>
+    <main className='containnerPanelLayout'>
+      <VerTareasSection />
+    </main>
   )
 }
 

@@ -8,8 +8,20 @@ mark
     all: unset;
     color: #0081fe;
 }
-.containnerPanelLayout
+.containerPanelControl
 {
     display: flex;
     align-items: flex-start;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+
+}
+.containnerPanelLayout{
+    width: 100%;
+    height: 100vh;
+}
+input[type="submit"]:disabled{
+    cursor: no-drop;
 }

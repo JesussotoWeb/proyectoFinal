@@ -1,6 +1,5 @@
-.Input
+.TagEditable
 {
-    all: unset;
     background-color: #efefef;
     color: #696060;
     padding: 10px 20px;
@@ -9,19 +8,19 @@
     font-family: Montserrat;
     font-size: 16px;
 }
-.Input::placeholder
+.TagEditable::placeholder
 {
     color: #cfcfcf;
 
 }
-.Input[disabled]{
+.TagEditable[disabled]{
     background-color: #fdfdfd;
     color: #cfcfcf;
     cursor: no-drop;
 }
-.Input[disabled]::placeholder{
+.TagEditable[disabled]::placeholder{
     color: #cfcfcf;
 }
-.Input[type='submit']{
+.TagEditable[type='submit']{
     cursor: pointer;
 }

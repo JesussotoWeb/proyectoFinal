@@ -1,0 +1,52 @@
+.VerTareasSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.VerTareasSection__Title{
+
+}
+.VerTareasSection__table{
+    all: unset;
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 0 45px -9px #0000003d;
+    border-radius: 20px;
+    padding: 10px;
+    max-height: 500px;
+    display: block;
+    overflow-y: auto;
+}
+.VerTareasSection__row{
+    border: 1px solid black;
+
+}
+.VerTareasSection__TableTitle{
+    border-bottom: 1px solid #dadada;
+    padding: 10px 15px;
+
+    color: #656565;
+    font-size: 14px;
+    font-family: "Poppins";
+}
+.VerTareasSection__btnContent{
+    min-width: 225px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.Table__btn{
+    padding-top: 6px;
+    padding-right: 13px;
+    padding-bottom: 6px;
+    padding-left: 13px;
+    font-size: 10px;
+}
+.Table__btn_red{
+    background-color: #de3d31;
+}
+.Table__btn_green{
+    background-color: #69cd7e;
+}

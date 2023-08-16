@@ -5,7 +5,8 @@ export const AuthContext = createContext();
 const dataInitial = {
   nombre: "",
   apellido: "",
-  logged: false
+  logged: false,
+  token: ''
 }
 
 
@@ -13,9 +14,10 @@ const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(dataInitial)
 
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem("tokenRegister"));
+    const token = JSON.parse(localStorage.getItem("token"));
 
     if(token?.logged){
+      console.log(token)
       setAuth(token);
     }
   }, [])
@@ -24,12 +26,28 @@ const AuthProvider = ({ children }) => {
     localStorage.clear();
     setTimeout(() => {
         location.pathname = "/";
-    }, 1000);
+    }, 3000);
 
 }
-  
+const verifyToken = async () => {
+  try {
+    const response = await fetch('http://localhost:4500/api/auth/verificarToken', {
+      headers: {
+        'token': auth.token
+      }
+    });
+    const data = await response.json();
+
+    if (!data.ok) {
+      logout();
+
+    }
+  } catch (error) {
+    console.error('Error al verificar el token', error);
+  }
+}
   return (
-    <AuthContext.Provider value={{auth, setAuth, logout}}>
+    <AuthContext.Provider value={{auth, setAuth, logout, verifyToken}}>
         { children }
     </AuthContext.Provider>
   )

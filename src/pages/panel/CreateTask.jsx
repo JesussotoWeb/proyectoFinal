@@ -1,13 +1,11 @@
-import HeaderPanel from "../../templates/HeaderPanel/HeaderPanel";
+import CreateTaskSection from "../../UI/organisms/createTaskSection/CreateTaskSection";
 
 const CreateTask = () => {
+
   return (
-    <div className='containnerPanelLayout'>
-      <HeaderPanel />
-      <main>
-          Crear
-      </main>
-    </div>
+    <main className='containnerPanelLayout'>
+         <CreateTaskSection />
+    </main>
   )
 }
 

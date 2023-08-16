@@ -2,8 +2,15 @@
 {
     padding: 20px 15px;
     height: 100vh;
-    width: 170px;
+    width: 230px;
     background-color: #1d2327;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: .5s;
+
 }
 .HeaderPanel__List
 {
@@ -20,12 +27,28 @@
 {
 
 }
+.HeaderPanel__logoContainer{
+    width: 120px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.HeaderPanel__logo
+{
+    width: 80px;
+    height: auto;
+}
 .HeaderPanel__link
 {
     text-decoration: none;
     color: #fff;
     transition: .5s;
     position: relative;
+    display: flex;
+    gap: 8px;
 }
 .HeaderPanel__link:hover
 {
@@ -48,4 +71,97 @@
 {
     transition: .5s;
     width: 100%;
+}
+.HeaderPanel__copy
+{
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 12px;
+    text-align: center;
+    font-style: italic;
+}
+.HeaderPanel__LinksContainer
+{
+    position: relative;
+}
+.HeaderPanel__copy a
+{
+    text-decoration: underline;
+}
+.HeaderPanel__logoParagraph
+{
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+}
+.HeaderPanel__icon
+{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    cursor: pointer;
+}
+.HeaderPanel__icon::after{
+    content: '';
+    width: 1px;
+    height: 0px;
+    left: 2.5px;
+    top: -50px;
+    position: absolute;
+    transition: .5s;
+}
+.HeaderPanel__icon:hover::after
+{   
+    background-color: #fff;
+    transition: .5s;
+    height: 45px;
+
+}
+.HeaderPanel__link_icon
+{
+    display: none;
+}
+.HeaderPanel_animate{
+    width: 60px;
+}
+
+.HeaderPanel_animate .HeaderPanel__logo
+{
+    width: 50px;
+}
+.HeaderPanel_animate .HeaderPanel__logoParagraph{
+    display: none;
+}
+.HeaderPanel_animate .HeaderPanel__link_icon
+{
+    display: flex;
+}
+.HeaderPanel_animate .HeaderPanel__link{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    min-width: 150px;
+    visibility: hidden;
+    display: none;
+    padding: 3px 10px;
+}
+.HeaderPanel__link_loading .HeaderPanel__link{
+    display: flex;
+
+}
+
+.HeaderPanel__link_loading .HeaderPanel__LinksContainer:hover .HeaderPanel__link
+{
+    transition: .5s;
+    visibility: visible;
+    background-color: #1d2327;
+}
+.HeaderPanel_animate .HeaderPanel__link::after{
+    background-color: #1d2327;
+}
+.HeaderPanel_animate .HeaderPanel__copy{
+    font-size: 8px;
 }

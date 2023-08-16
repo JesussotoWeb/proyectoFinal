@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import Input from '../../atoms/Input/Input';
 import Title from '../../atoms/Title/Title';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +19,7 @@ const CreateAccountSection = () => {
     const sendForm = async (input) => {
         input.preventDefault();
 
-            let response = await fetch('http://localhost:4500/api/auth', {
+            let response = await fetch('http://localhost:4500/api/auth/registrarUsuario', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const CreateAccountSection = () => {
                     logged: true
                 } 
                 const tokenToJson = JSON.stringify(token);
-                localStorage.setItem("tokenRegister", tokenToJson)
+                localStorage.setItem("token", tokenToJson)
                 setAuth(token)
 
                 setTimeout(() => {
